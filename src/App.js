@@ -1,3 +1,6 @@
+// can delete all of this and write the "juice" of 
+// your program here
+
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';

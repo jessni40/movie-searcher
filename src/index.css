@@ -1,13 +1,112 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+}
+:root{
+  --dark-gray: #414141;
+  --light-gray: #616161;
+}
+body {
+  font-family: opensans;
+}
+.title {
+  font-family: new-spirit;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 1em 0;
+  color: var(--dark-gray);
+}
+.form {
+  display: grid;
+  padding: 0 10em;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.label {
+  color: var(--dark-gray);
+  font-size: 1.3rem;
+  margin-bottom: 0.2rem;
+}
+
+.input {
+  font-family: opensans;
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding: 0.5rem 2rem;
+  line-height: 2.5rem;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 1rem;
+}
+
+.button {
+  background-color: #646464;
+  color: white;
+  padding: 0.8rem 1.7rem;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: background-color 150ms;
+}
+
+.button:hover {
+  background-color: gray;
+}
+
+.card-list {
+  padding: 0 10em;
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1em;
+}
+.card {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem 4rem;
+  background-color: white;
+}
+.card--title {
+  font-family: new-spirit;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--dark-gray);
+}
+
+.card--image {
+  border: solid #e3e3e3 1px;
+  border-radius: 20px;
+  width: 180px;
+  height: auto;
+  box-shadow: -3px -2px 15px #cccccc;
+}
+.imageDiv {
+  padding-right: 2em;
+}
+.card--desc {
+  padding-top: 2em;
+  
+}
+p{
+  color: var(--light-gray);;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  /* Set the hr color */
+  color: #e3e3e3; /* old IE */
+  background-color: #e3e3e3; /* Modern Browsers */
+}
+@media (min-width: 786px) {
+  .form {
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 1rem;
+    align-items: center;
+  }
+  .input {
+    margin-bottom: 0;
+  }
 }
